@@ -8,7 +8,7 @@ Created on Sat Dec  5 10:35:17 2020
 from flask import Flask,render_template,url_for,request
 import pandas as pd
 import pickle
-from app import app
+
 
 # load the model from the disk
 
