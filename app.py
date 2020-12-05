@@ -20,7 +20,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    df=pd.read_csv('C:/Users/KSK/Downloads/Data/Data/Real-Data/clean_real_2016_1.csv')
+    df=pd.read_csv('clean_real_2016_1.csv')
     my_prediction=loaded_model.predict(df.iloc[:,:-1].values)
     my_prediction=my_prediction.tolist()
     return render_template('result.html',prediction=my_prediction)
